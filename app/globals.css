@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@import 'aos/dist/aos.css';
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0F1F23;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.montserrat-100 { font-family: "Montserrat", sans-serif; font-weight: 100; }
+.montserrat-200 { font-family: "Montserrat", sans-serif; font-weight: 200; }
+.montserrat-300 { font-family: "Montserrat", sans-serif; font-weight: 300; }
+.montserrat-400 { font-family: "Montserrat", sans-serif; font-weight: 400; }
+.montserrat-500 { font-family: "Montserrat", sans-serif; font-weight: 500; }
+.montserrat-600 { font-family: "Montserrat", sans-serif; font-weight: 600; }
+.montserrat-700 { font-family: "Montserrat", sans-serif; font-weight: 700; }
+.montserrat-800 { font-family: "Montserrat", sans-serif; font-weight: 800; }
+.montserrat-900 { font-family: "Montserrat", sans-serif; font-weight: 900; }
+.open-sans-300 { font-family: "Open Sans", sans-serif; font-weight: 300; font-variation-settings: "wdth" 100; }
+.open-sans-400 { font-family: "Open Sans", sans-serif; font-weight: 400; font-variation-settings: "wdth" 100; }
+.open-sans-500 { font-family: "Open Sans", sans-serif; font-weight: 500; font-variation-settings: "wdth" 100; }
+.open-sans-600 { font-family: "Open Sans", sans-serif; font-weight: 600; font-variation-settings: "wdth" 100; }
+.open-sans-700 { font-family: "Open Sans", sans-serif; font-weight: 700; font-variation-settings: "wdth" 100; }
+.open-sans-800 { font-family: "Open Sans", sans-serif; font-weight: 800; font-variation-settings: "wdth" 100; }
