@@ -34,7 +34,7 @@ const HomeDashboard = () => {
     const [loading, setLoading] = useState(true)
     const links = [
         { id: 1, name: "Dashboard", href: "/dashboard/", icon: <LayoutDashboard /> },
-        { id: 2, name: "My Schedule", href: "/dashboard/schedule", icon: <CalendarClock /> },
+        { id: 2, name: "My Schedule", href: "/dashboard/ScheduleCaptain", icon: <CalendarClock /> },
         { id: 3, name: "Payment", href: "/dashboard/payment", icon: <CreditCard /> },
     ]
 
