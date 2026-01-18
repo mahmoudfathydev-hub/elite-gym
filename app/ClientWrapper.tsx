@@ -17,7 +17,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
         pathname?.startsWith("/dashboard");
 
     useEffect(() => {
-        AOS.init({ duration: 1200, once: true });
+        AOS.init({ duration: 1200, once: true, disable: 'mobile' });
     }, []);
 
     return (

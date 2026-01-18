@@ -14,7 +14,7 @@ const Navbar = () => {
     useEffect(() => {
         const signedIn = localStorage.getItem("isSignedIn") === "true";
         const userString = localStorage.getItem("user");
-        
+
         if (signedIn && userString) {
             try {
                 const userData = JSON.parse(userString);
@@ -41,7 +41,7 @@ const Navbar = () => {
 
     return (
         <nav className="w-full bg-[#181A1B] text-white fixed top-0 left-0 z-50 shadow-md">
-            <div className="container max-w-310 mx-auto flex items-center justify-between px-8 h-20">
+            <div className="container max-w-7xl mx-auto flex items-center justify-between px-8 h-20">
                 <div
                     data-aos="fade-down"
                     data-aos-easing="linear"
