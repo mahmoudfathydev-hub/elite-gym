@@ -291,14 +291,14 @@ export default function ChatbotPage() {
 
     return (
         <DashboardLayout>
-            <div className="p-8 h-[calc(100vh-80px)]">
+            <div className="p-4 md:p-8 h-[calc(100dvh-80px)]">
                 <div className="max-w-4xl mx-auto h-full flex flex-col">
                     {/* Header */}
-                    <div className="mb-6" data-aos="fade-down">
+                    <div className="mb-4 md:mb-6" data-aos="fade-down">
                         <div className="flex items-center justify-between">
                             <div>
-                                <h1 className="text-4xl font-bold text-white mb-2 flex items-center gap-3">
-                                    <MessageCircle className="text-purple-400" size={40} />
+                                <h1 className="text-2xl md:text-4xl font-bold text-white mb-2 flex items-center gap-3">
+                                    <MessageCircle className="text-purple-400" size={32} />
                                     AI Fitness Assistant
                                 </h1>
                                 <p className="text-slate-400">Ask me anything about fitness, nutrition, and training</p>
@@ -383,22 +383,22 @@ export default function ChatbotPage() {
                         </div>
 
                         {/* Input Area */}
-                        <div className="border-t border-slate-700 p-4">
-                            <div className="flex gap-3">
+                        <div className="border-t border-slate-700 p-2 md:p-4">
+                            <div className="flex gap-2 md:gap-3">
                                 <button
                                     onClick={toggleLanguage}
-                                    className="px-3 py-3 bg-slate-700 hover:bg-slate-600 text-slate-300 rounded-lg transition-all flex items-center gap-2"
+                                    className="px-2 md:px-3 py-3 bg-slate-700 hover:bg-slate-600 text-slate-300 rounded-lg transition-all flex items-center gap-2"
                                     title="Switch Language (EN/AR/FR)"
                                 >
                                     <FaGlobe />
-                                    <span className="text-xs font-bold">
+                                    <span className="text-xs font-bold hidden sm:inline">
                                         {language === "en-US" ? "EN" : language === "ar-EG" ? "AR" : "FR"}
                                     </span>
                                 </button>
 
                                 <button
                                     onClick={toggleListening}
-                                    className={`px-4 py-3 rounded-lg transition-all flex items-center justify-center ${isListening
+                                    className={`px-3 md:px-4 py-3 rounded-lg transition-all flex items-center justify-center ${isListening
                                         ? 'bg-red-500 hover:bg-red-600 text-white animate-pulse'
                                         : 'bg-slate-700 hover:bg-slate-600 text-slate-300'
                                         }`}
@@ -412,8 +412,8 @@ export default function ChatbotPage() {
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyPress={handleKeyPress}
-                                    placeholder={language === "ar-EG" ? "تحدث أو اكتب سؤالك هنا..." : (isListening ? "Listening..." : "Ask about workouts, nutrition, form tips...")}
-                                    className={`flex-1 bg-slate-800 border rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-all ${isListening ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-slate-700'
+                                    placeholder={language === "ar-EG" ? "تحدث أو اكتب..." : (isListening ? "Listening..." : "Ask me anything...")}
+                                    className={`min-w-0 flex-1 bg-slate-800 border rounded-lg px-3 md:px-4 py-3 text-sm md:text-base text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-all ${isListening ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-slate-700'
                                         } ${language === 'ar-EG' ? 'text-right' : 'text-left'}`}
                                     dir={language === 'ar-EG' ? 'rtl' : 'ltr'}
                                     disabled={loading}
@@ -421,10 +421,10 @@ export default function ChatbotPage() {
                                 <button
                                     onClick={sendMessage}
                                     disabled={!input.trim() || loading}
-                                    className="px-6 py-3 bg-purple-500 hover:bg-purple-600 disabled:bg-slate-700 disabled:cursor-not-allowed text-white rounded-lg transition-all flex items-center gap-2 font-semibold"
+                                    className="px-3 md:px-6 py-3 bg-purple-500 hover:bg-purple-600 disabled:bg-slate-700 disabled:cursor-not-allowed text-white rounded-lg transition-all flex items-center gap-2 font-semibold"
                                 >
                                     <FaPaperPlane />
-                                    Send
+                                    <span className="hidden sm:inline">Send</span>
                                 </button>
                             </div>
                         </div>

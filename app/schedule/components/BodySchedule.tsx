@@ -57,11 +57,11 @@ const BodySchedule = () => {
     };
     const [activeDay, setActiveDay] = useState<number>(1);
     return (
-        <div className="min-h-screen py-10">
-            <div className="container max-w-7xl mx-auto mt-10 px-6 py-3">
+        <div className="min-h-screen py-6 md:py-10">
+            <div className="container max-w-7xl mx-auto mt-6 md:mt-10 px-4 md:px-6 py-3">
                 <div
                     data-aos="fade-down"
-                    className="top grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+                    className="top grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4 mb-8">
                     {schedule.map((item) => {
                         const isEmpty = item.Day === "" || item.Day.toLowerCase().includes("rest");
                         const isActive = item.id === activeDay;

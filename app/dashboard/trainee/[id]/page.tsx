@@ -94,11 +94,11 @@ export default function TraineeProfilePage() {
 
     return (
         <DashboardLayout>
-            <div className="p-8 max-w-7xl mx-auto">
+            <div className="p-4 md:p-8 max-w-7xl mx-auto">
                 {/* Back Button */}
                 <button
                     onClick={() => router.push('/dashboard')}
-                    className="flex items-center gap-2 text-slate-400 hover:text-sky-400 transition mb-8"
+                    className="flex items-center gap-2 text-slate-400 hover:text-sky-400 transition mb-6 md:mb-8"
                     data-aos="fade-right"
                 >
                     <FaArrowLeft />
@@ -106,11 +106,11 @@ export default function TraineeProfilePage() {
                 </button>
 
                 {/* Profile Header */}
-                <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-xl border border-slate-700 p-8 mb-8" data-aos="fade-up">
-                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="bg-linear-to-br from-slate-900 to-slate-800 rounded-xl border border-slate-700 p-4 md:p-8 mb-8" data-aos="fade-up">
+                    <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                         {/* Profile Image */}
-                        <div className="relative">
-                            <div className="w-48 h-48 rounded-xl overflow-hidden bg-slate-800 border-4 border-sky-500/50">
+                        <div className="relative mx-auto md:mx-0">
+                            <div className="w-32 h-32 md:w-48 md:h-48 rounded-xl overflow-hidden bg-slate-800 border-4 border-sky-500/50">
                                 {trainee.image && getImageUrl(trainee.image) ? (
                                     <img
                                         src={getImageUrl(trainee.image)!}
@@ -123,7 +123,7 @@ export default function TraineeProfilePage() {
                                     />
                                 ) : null}
                                 <div className={`flex h-full w-full items-center justify-center ${trainee.image ? 'hidden' : ''}`}>
-                                    <div className="flex h-32 w-32 items-center justify-center rounded-full bg-slate-700 text-5xl font-semibold text-slate-300">
+                                    <div className="flex h-20 w-20 md:h-32 md:w-32 items-center justify-center rounded-full bg-slate-700 text-3xl md:text-5xl font-semibold text-slate-300">
                                         {trainee.fullName.charAt(0)}
                                     </div>
                                 </div>
@@ -131,11 +131,11 @@ export default function TraineeProfilePage() {
                         </div>
 
                         {/* Profile Info */}
-                        <div className="flex-1">
-                            <div className="flex items-start justify-between mb-4">
+                        <div className="flex-1 w-full text-center md:text-left">
+                            <div className="flex flex-col md:flex-row items-center md:items-start justify-between mb-4 gap-4">
                                 <div>
-                                    <h1 className="text-4xl font-bold text-white mb-2">{trainee.fullName}</h1>
-                                    <div className="flex items-center gap-2 text-slate-400">
+                                    <h1 className="text-2xl md:text-4xl font-bold text-white mb-2">{trainee.fullName}</h1>
+                                    <div className="flex items-center justify-center md:justify-start gap-2 text-slate-400">
                                         <FaCalendar size={16} />
                                         <span>Joined {new Date(trainee.$createdAt).toLocaleDateString('en-US', {
                                             year: 'numeric',
