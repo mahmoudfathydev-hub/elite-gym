@@ -16,6 +16,7 @@ Elite Gym is a comprehensive gym management system that streamlines operations f
 - **Progress Tracking**: Monitor trainee performance and attendance
 - **Payment Processing**: Integrated payment management
 - **Activity Monitoring**: Real-time activity feeds and notifications
+- **Codebase Size**: 12,580+ lines of code across 50+ components
 
 #### **For Trainees:**
 
